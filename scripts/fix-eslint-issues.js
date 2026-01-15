@@ -396,7 +396,6 @@ function fixUnescapedEntities() {
 // ============================================================================
 
 console.log('ESLint Fix Script');
-console.log('=================');
 console.log('This script will fix well-defined ESLint issues.\n');
 
 // Dry run check
