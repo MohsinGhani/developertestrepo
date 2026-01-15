@@ -1,0 +1,10 @@
+export { default as Header } from "./layout/Header";
+export { default as HomeSection } from "./home/HeroSection";
+export { default as IntroSection } from "./home/IntroSection";
+export { default as Testimonials } from "./home/Testimonials";
+export { default as FAQPreview } from "./home/FAQPreview";
+export { default as ServicesPage } from "./home/ServicesPage";
+export { default as Footer } from "./layout/Footer";
+export { default as TeamMembers } from "./our-team/OurTeam";
+export { default as Location } from "./location/LocationSection";
+export { default as Blog } from "./blog/Blog";

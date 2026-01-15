@@ -12,7 +12,7 @@ import {
   getSocialLinksForLocationSlug,
   getAllLocationsSocialLinks,
 } from "@/lib/social-links";
-import { Footer } from "../variants/professional";
+import { Footer } from "../variants/modern";
 
 interface FooterShellProps {
   locationPrefix?: string;
@@ -85,20 +85,13 @@ export default async function FooterShell({
     // />
     <Footer
       agencyName={client?.agency_name}
+      address={address}
       city={city}
       state={state}
       postalCode={postalCode}
       phone={phone}
-      address={address}
-      locationName={locationName}
-      socialLinks={websiteData?.social_links}
-      badges={badges}
-      tagline={websiteData?.tagline}
-      locationPrefix={locationPrefix}
-      isMultiLocation={isMultipleLocation}
       footerLogoUrl={theme?.website_logo_url}
-      allLocations={allLocations || []}
-      socialLinksModalData={socialLinksModalData || { locations: [] }}
+      currentYear={new Date().getFullYear()}
     />
   );
 }

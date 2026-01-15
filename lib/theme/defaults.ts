@@ -17,7 +17,7 @@ export const DEFAULT_THEME: ThemeSettings = {
   client_id: '',
   
   // Primary colors (neutral dark blue)
-  color_primary: '#1e3a5f',
+  color_primary: '#25cdc7',
   color_primary_foreground: '#FFFFFF',
   
   // Accent colors (neutral blue for buttons)
@@ -43,7 +43,7 @@ export const DEFAULT_THEME: ThemeSettings = {
   divider_style: 'solid',
   
   // Typography
-  font_heading: 'Playfair Display',
+  font_heading: 'Plus Jakarta Sans',
   font_body: 'Inter',
   font_accent: 'Caveat',
   heading_size_multiplier: 1.0,

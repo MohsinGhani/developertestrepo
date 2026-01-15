@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Caveat:wght@400;500;600&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Caveat:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +13,7 @@
      * ============================================ */
     
     /* Primary colors (neutral dark blue) */
-    --color-primary: #1e3a5f;
+    --color-primary: #25cdc7;
     --color-primary-foreground: #FFFFFF;
     
     /* Accent colors (neutral blue for buttons) */
@@ -41,7 +40,7 @@
     
     /* Card Nav settings */
     --card-nav-bg: var(--navbar-bg-color, #FFFFFF);
-    --card-nav-card-bg: var(--color-primary, #1e3a5f);
+    --card-nav-card-bg: var(--color-primary, #25cdc7);
     --card-nav-card-text: var(--color-primary-foreground, #FFFFFF);
     --card-nav-card-bg-alt: var(--color-accent, #2563eb);
     --card-nav-card-text-alt: var(--color-accent-foreground, #FFFFFF);
@@ -49,7 +48,7 @@
     --card-nav-card-text-tertiary: var(--color-secondary-foreground, #FFFFFF);
     
     /* Typography */
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-accent: 'Caveat', cursive;
     --heading-weight: 700;
@@ -99,23 +98,13 @@
     border-color: hsl(var(--border));
     box-sizing: border-box;
   }
-  
-  h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    font-weight: var(--heading-weight);
-  }
-  
-  .font-playfair {
-    font-family: var(--font-heading);
-  }
+
+
   
   .font-caveat {
     font-family: var(--font-accent);
   }
-  
-  .font-heading {
-    font-family: var(--font-heading);
-  }
+
 }
 
 /* Component classes adapted from original implementation */

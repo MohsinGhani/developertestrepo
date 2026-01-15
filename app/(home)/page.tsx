@@ -1,7 +1,16 @@
 import React from "react";
 import { Metadata } from "next";
-import { getVariantComponent } from "@/lib/variants";
+// import HeroSection from '@/components/home-page/HeroSection';
+// import IntroSection from '@/components/home-page/IntroSection';
+
+// import LocationPoliciesSection from "@/components/home-page/LocationPoliciesSection";
+// import Testimonials from "@/components/home-page/TestimonialsWrapper";
+// import HomeCTA from "@/components/home-page/HomeCTA";
+// import FAQPreview from "@/components/home-page/FAQPreviewWrapper";
+// import InsuranceCareersSection from "@/components/home-page/InsuranceCareersSection";
 import { getClientData } from "@/lib/client";
+import { getVariantComponent } from "@/lib/variants";
+// import FAQSearch from "@/components/faq/FAQSearch";
 
 // Page-specific metadata overrides - inherits from layout.tsx
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,29 +35,34 @@ export async function generateMetadata(): Promise<Metadata> {
     // Page-specific Twitter/X overrides
     twitter: {
       title: `${agencyName} | ${city} Insurance Expert`,
-      description: `Personalized insurance protection for ${city} families and businesses. Auto, home, life & commercial insurance.`,
+      description: `Personalizednpm run dev insurance protection for ${city} families and businesses. Auto, home, life & commercial insurance.`,
     },
   };
 }
 
 export default async function Home() {
-  const HeroSection = await getVariantComponent("HeroSection");
   const IntroSection = await getVariantComponent("IntroSection");
-  const LocationPoliciesSection = await getVariantComponent("LocationPoliciesSection");
+  const HeroSection = await getVariantComponent("HeroSection");
+  const ServicesPage = await getVariantComponent("ServicesPage");
+  const Location = await getVariantComponent("Location");
   const Testimonials = await getVariantComponent("Testimonials");
-  const HomeCTA = await getVariantComponent("HomeCTA");
   const FAQPreview = await getVariantComponent("FAQPreview");
-  const CareersSection = await getVariantComponent("CareersSection");
-
   return (
     <div className="home-content">
       <HeroSection />
       <IntroSection />
-      <LocationPoliciesSection />
+      <ServicesPage />
+      <Location />
+      <Testimonials />
+      <FAQPreview />
+
+      {/* <HomeCTA /> */}
+      {/* <InsuranceCareersSection /> */}
+      {/* <LocationPoliciesSection />
       <Testimonials />
       <HomeCTA />
       <FAQPreview />
-      <CareersSection />
+      <InsuranceCareersSection />  */}
     </div>
   );
 }

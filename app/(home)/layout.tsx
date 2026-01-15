@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 import HeaderShell from "components/layout/HeaderShell";
 import FooterShell from "components/layout/FooterShell";
+import { Header, Footer } from "@/components/variants/modern";
 
 export default function HomeLayout({
   children,
@@ -10,10 +11,16 @@ export default function HomeLayout({
   return (
     <>
       <HeaderShell />
-      <main className="flex-grow">
+
+      {/* <Header /> */}
+      <main
+        className="flex-grow"
+        style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+      >
         {children}
       </main>
-      <FooterShell locationSlug={null} />
+      {/* <Footer /> */}
+      <FooterShell />
     </>
   );
 }

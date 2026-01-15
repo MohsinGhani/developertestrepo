@@ -1,10 +1,10 @@
-import { Blog } from "@/components/variants/modern";
+import { TeamMembers } from "@/components/variants/modern";
 import React from "react";
 
 export default function page() {
   return (
     <div>
-      <Blog />
+      <TeamMembers />
     </div>
   );
 }

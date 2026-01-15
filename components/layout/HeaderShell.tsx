@@ -2,8 +2,7 @@ import HeaderBar from "components/layout/HeaderBar";
 import { getClientData } from "@/lib/client";
 import { getFeatures, isMultiLocation, getAllWebsites } from "@/lib/website";
 import { getThemeSettings } from "@/lib/theme";
-import { Header } from "../variants/professional";
-
+import { Header } from "../variants/modern";
 interface HeaderShellProps {
   locationPrefix?: string;
 }
@@ -35,27 +34,19 @@ export default async function HeaderShell({
     : { multi_location: isMultiLoc };
 
   return (
-    // <HeaderBar
-    // 	websiteName={websiteName}
-    // 	phone={clientData?.phone}
-    // 	locationPrefix={locationPrefix}
-    // 	logoUrl={theme?.fav_icon_url}
-    // 	showSiteName={theme?.show_client_site_name ?? true}
-    // 	features={mergedFeatures}
-    // 	navbarSettings={theme?.navbar_settings}
-    // 	ctaSettings={theme?.cta_settings}
-    // 	locations={isMultiLoc ? locations : undefined}
-    // />
-    <Header
-      websiteName={websiteName}
-      phone={clientData?.phone}
-      locationPrefix={locationPrefix}
-      logoUrl={theme?.fav_icon_url}
-      showSiteName={theme?.show_client_site_name ?? true}
-      features={features}
-      navbarSettings={theme?.navbar_settings}
-      ctaSettings={theme?.cta_settings}
-      locations={isMultiLoc ? locations : undefined}
-    />
+    <>
+      {/* <HeaderBar
+        websiteName={websiteName}
+        phone={clientData?.phone}
+        locationPrefix={locationPrefix}
+        logoUrl={theme?.fav_icon_url}
+        showSiteName={theme?.show_client_site_name ?? true}
+        features={mergedFeatures}
+        navbarSettings={theme?.navbar_settings}
+        ctaSettings={theme?.cta_settings}
+        locations={isMultiLoc ? locations : undefined}
+      /> */}
+      <Header logoUrl={theme?.website_logo_url} />
+    </>
   );
 }
